@@ -1,0 +1,37 @@
+.table-wrapper {
+    display: table;
+    border-#{$left}: 1px solid $darkgray;
+    border-bottom: 1px solid $darkgray;
+    margin-bottom: 20px;
+
+    @media (max-width: $screen-xs-max) {
+        display: inline-table;
+    }
+
+    .table-row {
+        display: table-row;
+
+        &.head {
+            font-weight: bold;
+            color: $red;
+        }
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            border-#{$right}: 1px solid $darkgray;
+            border-top: 1px solid $darkgray;
+            padding: 5px 10px;
+
+            &:first-child {
+                font-weight: bold;
+                color: $red;
+            }
+
+            @media (max-width: $screen-xs-max) {
+                padding: 5px;
+                font-size: $font-14;
+            }
+        }
+    }
+}
